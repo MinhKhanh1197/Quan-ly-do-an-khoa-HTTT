@@ -1,0 +1,59 @@
+
+
+@import url(layout.css);
+@import url(pages.css);
+@import url(elements.css);
+@import url(framework.css);
+@import url(stylesheet.css);
+@import url(font-awesome.min.css);
+
+/* If you want to add your own css code, please do it in the custom.css file */
+@import url(custom.css);
+
+/* Remove this before using the template */
+
+@import url(demo-only.css);
+
+.search1 {
+    margin-top: 10px;
+    margin-right: -5px;
+}
+
+.stylish-input-group .input-group-addon {
+    background: white !important;
+}
+
+.stylish-input-group .form-control {
+    border-right: 0;
+    box-shadow: 0 0 0;
+    border-color: #ccc;
+}
+
+.stylish-input-group button {
+    border: 0;
+    background: transparent;
+}
+.noahover a:hover {
+    color: #FF9900;
+    text-decoration: none;
+}
+.noahover a:link {
+    text-decoration: none;
+}
+
+#header a:hover {
+    color: #C0BAB6;
+}
+#topdoan ul li a:hover {
+    color: #FF9900;
+
+}
+#topdoan ul li a:link {
+    color: #FF9900;
+}
+.formnopbai
+{
+    width:60%;
+    margin-top:30px;
+    left:10%;
+}

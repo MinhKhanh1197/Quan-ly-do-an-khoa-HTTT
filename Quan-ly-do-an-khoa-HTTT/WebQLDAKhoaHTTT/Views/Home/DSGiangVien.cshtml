@@ -1,0 +1,40 @@
+﻿
+@model IEnumerable<WebQLDAKhoaHTTT.Models.GIANGVIEN>
+@{
+    ViewBag.Title = "Danh sách giảng viên";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<style>
+    .abc {
+        font-size: 18pt;
+    }
+</style>
+
+<div id="container">
+    <div class="three_quarter first">
+        <h2>Danh sách giảng viên</h2>
+        <div class="accordion-wrapper">
+            @foreach (var dsgv in Model)
+    {
+        <a href="javascript:void(0)" class="accordion-title orange"><span>@dsgv.TenGV </span></a>
+        <div class="accordion-content">
+            <img src="~/images/demo/@dsgv.Anh"/>
+            <p>Bộ môn: @dsgv.BoMon</p>
+            <p>Email: @dsgv.Email</p>
+        </div>
+
+}
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+
+
+
+
+
+
+
+

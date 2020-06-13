@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Quản lý đồ án khoa Hệ thống thông tin</title>
+    <meta charset="iso-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Scripts/jquery-1.10.2.min.js" type="text/javascript" />
+    <link href="~/Content/main.css" rel="stylesheet" type="text/css" media="all">
+    <link href="~/Content/mediaqueries.css" rel="stylesheet" type="text/css" media="all">
+    <style type="text/css">
+        .login-form {
+            width: 340px;
+            margin: auto;
+            padding-top:6%;
+            padding-bottom:7%;
+        }
+
+            .login-form form {
+                margin-bottom: 15px;
+                background: #f7f7f7;
+                box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+                padding: 30px;
+            }
+
+            .login-form h2 {
+                margin: 0 0 15px;
+            }
+
+        .form-control, .btn {
+            min-height: 38px;
+            border-radius: 2px;
+        }
+        .btn {
+            font-size: 15px;
+            font-weight: bold;
+        }
+    </style>
+
+    <link href="~/Content/responsiveslides.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body class="noahover">
+
+    <div class="wrapper row1">
+        <header id="header" class="full_width clear">
+            <div id="hgroup">
+                <h1><a href="index.html">Quản lý đồ án Khoa Hệ Thống Thông Tin</a></h1>
+                <h2>S.T team development</h2>
+            </div>
+            <div id="header-contact">
+                <ul class="list none">
+                    <li><span class="icon-envelope"></span> <a href="https://mail.google.com/mail" target="_blank">khanhnm15406@st.uel.edu.vn</a></li>
+                    <li><span class="icon-phone"></span> +84 693 444159</li>
+                </ul>
+            </div>
+        </header>
+    </div>
+    <div class="wrapper row2">
+        <nav id="topnav">
+            <ul class="clear">
+                <li class="active">@Html.ActionLink("Trang chủ","Index","Home")</li>
+                <li>
+                    <a class="drop" href="#" title="Pages">Giảng viên</a>
+                    <ul>
+                        <li>@Html.ActionLink("Danh sách giảng viên", "DSGiangVien","Home")</li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="drop" href="#" title="Elements">Sinh viên</a>
+                    <ul>
+                        <li>@Html.ActionLink("Danh sách sinh viên","DSSinhVien","Home")</li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="drop" href="#" title="Portfolio Layouts">Đồ án</a>
+                    <ul>
+                        <li>@Html.ActionLink("Nộp đò án", "FrmNopDA", "Home")</li>
+                        <li>@Html.ActionLink("Danh sách đồ án", "DSDoAn", "Home")</li>
+                    </ul>
+                </li>
+                <li>
+                    @Html.ActionLink("Đăng ký đồ án", "FrmDKDA", "Home")
+                    <!--Form đăng ký đồ án-->
+                </li>
+                <li>@Html.ActionLink("Đăng nhập", "DangNhap", "Home")</li>
+                <li class="last-child">@Html.ActionLink("Góp ý","GopY","Home")</li>
+                <li>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 col-sm-offset-4 search1">
+                                <div id="imaginary_container">
+                                    <div class="input-group stylish-input-group">
+                                        <input type="text" class="form-control" placeholder="Search">
+                                        <span class="input-group-addon">
+                                            <button type="submit">
+                                                <span class="glyphicon glyphicon-search"></span>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- content -->
+    <div class="wrapper row3">
+        @RenderBody()
+    </div>
+    <!-- Footer -->
+    <div class="wrapper row4">
+        <div id="copyright" class="clear">
+            <p class="fl_left">Copyright &copy; @DateTime.Now.Year - Khoa Hệ thống thông tin trường Đại học Kinh Tế - Luật ĐHQG tp. Hồ Chí Minh <a href="#"></a></p>
+            <p class="fl_right">Phát triển bởi: <a href="https://www.facebook.com/khanhminh1197" target="_blank" title="Nguyễn Minh Khánh">Nguyễn Minh Khánh</a></p>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="~/Scripts/jquery-latest.min.js"><\/script>\<script src="~/Scripts/jquery-ui.min.js"><\/script>')
+    </script>
+    <script>jQuery(document).ready(function ($) { $('img').removeAttr('width height'); });</script>
+    <script src="~/Scripts/responsiveslides.min.js"></script>
+    <script src="~/Scripts/jquery-mobilemenu.min.js"></script>
+    <script src="~/Scripts/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<WebQLDAKhoaHTTT.Models.SINHVIEN>
+
+@{
+    ViewBag.Title = "Danh sách Sinh viên";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<style>
+    .abc {
+        font-size: 18pt;
+    }
+</style>
+
+<div id="container">
+    <div class="three_quarter first">
+        <h2>Danh sách sinh viên</h2>
+        <div class="accordion-wrapper">
+            @foreach (var dssv in Model)
+            {
+                <a href="javascript:void(0)" class="accordion-title orange"><span>@dssv.HoTen </span></a>
+                <div class="accordion-content">
+                    <p>MSSV: @dssv.MaSV</p>
+                    <p>Ngày sinh: @dssv.NgaySinhSV</p>
+                    <p>Email: @dssv.Email</p>
+                </div>
+
+            }
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
